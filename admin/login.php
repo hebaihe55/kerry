@@ -13,25 +13,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
     <meta name="keywords" content="Flat Dark Web Login Form Responsive Templates, Iphone Widget Template, Smartphone login forms,Login form, Widget Template, Responsive Templates, a Ipad 404 Templates, Flat Responsive Templates" />
-    <link href="css/style.css" rel='stylesheet' type='text/css' />
+    <link href="../css/style1.css" rel='stylesheet' type='text/css' />
     <!--webfonts-->
 
     <!--//webfonts-->
     <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
 </head>
 <body>
-<script>$(document).ready(function(c) {
-        $('.close').on('click', function(c){
-            $('.login-form').fadeOut('slow', function(c){
-                $('.login-form').remove();
-            });
-        });
-    });
-</script>
+
 <!--SIGN UP-->
-<h1>klasikal Login Form</h1>
+
 <div class="login-form">
-    <div class="close"> </div>
+
     <div class="head-info">
         <label class="lbl-1"> </label>
         <label class="lbl-2"> </label>
@@ -39,12 +32,12 @@
     </div>
     <div class="clear"> </div>
     <div class="avtar">
-        <img src="images/avtar.png" />
+        <img src="../img/avtar.png" />
     </div>
     <form>
-        <input type="text" class="text" value="Username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}" >
+        <input type="text" class="text" placeholder="用户名"   >
         <div class="key">
-            <input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
+            <input type="password" placeholder="密码">
         </div>
     </form>
     <div class="signin">
@@ -52,7 +45,7 @@
     </div>
 </div>
 <div class="copy-rights">
-    <p>Copyright &copy; 2015.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
+
 </div>
 
 </body>
