@@ -1,0 +1,71 @@
+@charset "utf-8";
+/* CSS Document */
+.swiper-container {
+    width: 750px;
+    height: 470px;
+    margin: 0px auto;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.sosbg {
+    position: relative;
+}
+
+.sosbgimg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.sostext {
+    position: absolute;
+    top: 10px;
+    left: 0px;
+}
+
+.soslogo {
+    position: absolute;
+    bottom: 300px;
+    right: 70px;
+}
+
+.btnbegin {
+    position: absolute;
+    bottom: 88px;
+    left: 180px
+}
+
+.userinfo {
+    height: 360px;
+    text-align: center;
+}
+
+.txt {
+    height: 50px;
+    width: 400px;
+    border-radius: 50px;
+    display: block;
+    margin: 50px auto;
+    font-size: 24px;
+    font-family: "方正兰亭纤黑 GBK";
+    border: 1px #999 solid
+}
