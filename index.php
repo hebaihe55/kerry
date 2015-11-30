@@ -55,7 +55,7 @@ if (kerry::UserCheck($openid) == 0) {
             <div class="swiper-slide"><a href="coffee.html"><img src="img/banner2.jpg" class="img-responsive"></a></div>
             <div class="swiper-slide"><a href="cake.html"><img src="img/banner3.jpg" class="img-responsive"></a></div>
             <div class="swiper-slide"><a href="sewing.html"><img src="img/banner4.jpg" class="img-responsive"></a></div>
-            <div class="swiper-slide"><a href="map.php"><img src="img/banner5.jpg" class="img-responsive"></a></div>
+            <div class="swiper-slide"><a href="sos.html"><img src="img/banner5.jpg" class="img-responsive"></a></div>
             <div class="swiper-slide"><a href="market.php"><img src="img/banner6.jpg" class="img-responsive"></a></div>
 
 

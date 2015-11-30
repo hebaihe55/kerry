@@ -35,7 +35,7 @@ function UserCheck()
 }
 
 
-/*
+
 
 
 
@@ -43,20 +43,41 @@ function UserEdit()
 {
 
 
+    $username = $_POST["username"];
 
-$username = $_POST["username"];
+    $mobile = $_POST["mobile"];
 
-$mobile = $_POST["mobile"];
+    $openid = $_POST["openid"];
 
-$openid = $_POST["openid"];
+    $ext1 = "";
+    $ext2 = "";
+ $flag=0;
+
+    $ticket=array();
+    $ticket = kerry::TicketUnused();
 
 
-kerry::UserEdit($openid, $username, $mobile);
+    if (count($ticket) > 0){
+
+echo date("y-M-d M:h:s");
+
+        if ($ticket["begintime"] < date("y-M-d M:h:s") && $ticket["endtime"] > date("y-M-d M:h:s")) {
+            $ext1 = $ticket['brand'];
+            $ext2 = $ticket["mid"];
+            $flag=1;
 
 
-header("Location:../discount.html");
-exit();
+        }
+    kerry::TicketEdit($ext2);
 }
 
-*/
+kerry::UserEdit($openid, $username, $mobile,$ext1,$ext2);
+
+
+
+
+//header("Location:../discount.php?flag=" .$flag);
+//exit();
+}
+
 ?>

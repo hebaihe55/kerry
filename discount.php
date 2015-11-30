@@ -1,19 +1,12 @@
 <?php
-require("code/kerry.php");
+/**
+ * Created by PhpStorm.
+ * User: hejiyuan
+ * Date: 2015/11/30
+ * Time: 22:19
+ */
 
-$openid = $_COOKIE["user"];
-
-$rs = array();
-
-$rs = kerry::ActiveGroup($openid);
-
-if(count($rs)==3)
-{
-
-    header("Location:lottery.php");
-    exit();
-}
-
+$flag=$_GET["flag"];
 
 
 ?>
@@ -41,26 +34,13 @@ if(count($rs)==3)
 <body>
 <div class="container-fluid">
 
-    <header class="text-center"><a href="menu.html">
-            <img src="img/headleft.jpg"></a><img src="img/headcenter.jpg"><a href="javascript:history.go(-1);"><img
-                src="img/headright.jpg"></a>
+    <header class="text-center"><a href="menu.html"><img src="img/headleft.jpg"></a><img src="img/headcenter.jpg"><a
+            href="javascript:history.go(-1);"><img src="img/headright.jpg"></a>
     </header>
 
-    <div class="text-center">
-        <img src='<?php if ($rs["咖啡杯"] < 1) {
-            echo "img/errcoffee.jpg";
-        } else {
-            echo "img/findcoffee.jpg";
-        } ?>'><img src='<?php if ($rs["剪刀"] < 1) {
-            echo "img/errshear.jpg";
-        } else {
-            echo "img/findshear.jpg";
-        } ?>'><img src='<?php if ($rs["厨师帽"] < 1) {
-            echo "img/errhat.jpg";
-        } else {
-            echo "img/findhat.jpg";
-        } ?>'></div>
-
+    <div class="text-center"><img src="img/discount1.jpg"></div>
+    <div class='text-center  <?php if($flag=="1"){echo "show";}else{echo "hidden";}?>  '><img src="img/discount2.jpg"></div>
+    <div class='text-center <?php if($flag=="0"){echo "show";}else{echo "hidden";}?>'><a href="show.php"> <img src="img/discount3.jpg"></a></div>
 
     <footer class="text-center"><img src="img/footer.jpg"></footer>
 </div>

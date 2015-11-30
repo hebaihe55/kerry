@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" promptOnRemoteOverwrite="CHECK_TIMESTAMP" serverName="kerry" uploadOnCheckin="7f5c8271-2e6f-4a79-b031-1bd78f790661" notifyRemoteChanges="true">
+  <component name="PublishConfigData" autoUpload="Always" promptOnRemoteOverwrite="CHECK_TIMESTAMP" serverName="kerry" uploadOnCheckin="6c28aaf1-c632-400a-883e-e5f0b9c345dd" notifyRemoteChanges="true">
     <serverData>
       <paths name="kerry">
         <serverdata>
@@ -10,7 +10,7 @@
         </serverdata>
       </paths>
     </serverData>
-    <option name="myUploadOnCheckinName" value="letty" />
+    <option name="myUploadOnCheckinName" value="kerry" />
     <option name="myAutoUpload" value="ALWAYS" />
   </component>
 </project>

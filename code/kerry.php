@@ -36,6 +36,25 @@ class kerry
     }
 
 
+    //查找未使用的折扣券
+    public static function TicketUnused()
+    {
+        $conn = mysqli_connect("localhost", "hejiyuan1", "HJYhjy@123321", "WECHAT1");
+        $conn->query("set names utf8");
+// 检测连接
+        if (!$conn) {
+            die("Connection failed: " . mysql_connect_error());
+        }
+        $sql = "select * from ticket where flag1=0 order by mid limit 0,1";
+
+        $result = $conn->query($sql);
+
+        $rows = $result->fetch_assoc();
+
+        return $rows;
+    }
+
+
     //活动分组
     public static function ActiveGroup($openid)
     {
@@ -96,8 +115,7 @@ class kerry
 
     }
 
-
-    public static function UserEdit($openid, $userName, $mobile)
+    public static function TicketEdit($mid)
     {
         $conn = mysqli_connect("localhost", "hejiyuan1", "HJYhjy@123321", "WECHAT1");
         $conn->query("set names utf8");
@@ -106,7 +124,36 @@ class kerry
             die("Connection failed: " . mysqli_connect_error());
         }
 
-        $sql = "update users set relname='" . $userName . "', mobile='" . $mobile . "' where openid='" . $openid . "'";
+        $sql = "update ticket set flag1=1 where mid=" . $mid ;
+
+        echo $sql;
+
+        $result = false;
+
+
+        if (mysqli_query($conn, $sql)) {
+            $result = true;
+        }
+
+
+        mysqli_close($conn);
+
+
+      echo $result;
+    }
+
+
+
+    public static function UserEdit($openid, $userName, $mobile,$ext1,$ext2)
+    {
+        $conn = mysqli_connect("localhost", "hejiyuan1", "HJYhjy@123321", "WECHAT1");
+        $conn->query("set names utf8");
+// 检测连接
+        if (!$conn) {
+            die("Connection failed: " . mysqli_connect_error());
+        }
+
+        $sql = "update users set relname='" . $userName . "', mobile='" . $mobile .  "', ext1='" . $ext1 . "', ext2='" . $ext2 ."' where openid='" . $openid . "'";
 
 
         $result = false;
@@ -120,7 +167,7 @@ class kerry
         mysqli_close($conn);
 
 
-        echo $result;
+       return $result ;
     }
 
 

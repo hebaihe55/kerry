@@ -35,6 +35,7 @@
     </header>
 
     <div class="text-center"><img src="img/market1.jpg" class="img-responsive"></div>
+    <div class="text-center"><a href="sos.html"> <img src="img/begin2.jpg" class="img-responsive"></a></div>
 
 
     <footer class="text-center"><img src="img/footer.jpg"></footer>
