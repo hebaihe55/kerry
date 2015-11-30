@@ -66,6 +66,7 @@ if (kerry::UserCheck($openid) == 0) {
     <!-- Swiper JS -->
 
 
+
     <!-- Initialize Swiper -->
     <script>
         var swiper = new Swiper('.swiper-container', {
@@ -79,6 +80,8 @@ if (kerry::UserCheck($openid) == 0) {
 
     <div class="text-center"><img src="img/logo.jpg"></div>
     <footer><img src="img/footer.jpg"></footer>
+
+
 </div>
 </body>
 </html>

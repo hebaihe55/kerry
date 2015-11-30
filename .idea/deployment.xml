@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" promptOnRemoteOverwrite="CHECK_TIMESTAMP" uploadOnCheckin="7f5c8271-2e6f-4a79-b031-1bd78f790661" notifyRemoteChanges="true">
+  <component name="PublishConfigData" autoUpload="Always" promptOnRemoteOverwrite="CHECK_TIMESTAMP" serverName="letty" uploadOnCheckin="7f5c8271-2e6f-4a79-b031-1bd78f790661" notifyRemoteChanges="true">
     <serverData>
       <paths name="letty">
         <serverdata>
