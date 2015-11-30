@@ -1,25 +1,4 @@
-<?php
 
-
-
-require("code/kerry.php");
-
-
-if (!isset($_COOKIE["user"])) {
-
-    setcookie(user, time() + mt_rand(), time() + 60 * 60 * 24 * 30);
-}
-
-
-$openid = $_COOKIE["user"];
-
-
-if (kerry::UserCheck($openid) == 0) {
-
-    kerry::UserAdd($openid);
-}
-
-?>
 <!DOCTYPE html>
 <html lang="zh">
 <head>
@@ -37,8 +16,35 @@ if (kerry::UserCheck($openid) == 0) {
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <link href="css/swiper.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
 
+<style>
+    .swiper-container {
+        width: 750px;
+        height: 1047px;
+        margin: 0px auto;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+</style>
 
 </head>
 <body>
@@ -51,13 +57,10 @@ if (kerry::UserCheck($openid) == 0) {
 
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><a href="map.php"><img src="img/banner1.png" class="img-responsive"></a></div>
-            <div class="swiper-slide"><a href="coffee.html"><img src="img/banner2.jpg" class="img-responsive"></a></div>
-            <div class="swiper-slide"><a href="cake.html"><img src="img/banner3.jpg" class="img-responsive"></a></div>
-            <div class="swiper-slide"><a href="sewing.html"><img src="img/banner4.jpg" class="img-responsive"></a></div>
-            <div class="swiper-slide"><a href="map.php"><img src="img/banner5.jpg" class="img-responsive"></a></div>
-            <div class="swiper-slide"><a href="market.php"><img src="img/banner6.jpg" class="img-responsive"></a></div>
-
+            <div class="swiper-slide"><a href="map.php"><img src="img/show1.jpg" class="img-responsive"></a></div>
+            <div class="swiper-slide"><a href="coffee.html"><img src="img/show2.jpg" class="img-responsive"></a></div>
+            <div class="swiper-slide"><a href="cake.html"><img src="img/show3.jpg" class="img-responsive"></a></div>
+            <div class="swiper-slide"><a href="sewing.html"><img src="img/show4.jpg" class="img-responsive"></a></div>
 
         </div>
         <!-- Add Pagination -->
@@ -81,7 +84,7 @@ if (kerry::UserCheck($openid) == 0) {
 
 
 
-    <div class="text-center"><img src="img/logo.jpg"></div>
+
     <footer><img src="img/footer.jpg"></footer>
 
 
