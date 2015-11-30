@@ -19,7 +19,7 @@ $rs = kerry::ActiveGroup($openid);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=750, user-scalable=no, target-densitydpi=device-dpi">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>嘉里中心</title>
+    <title>静安嘉里中心</title>
     <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js">
     </script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
