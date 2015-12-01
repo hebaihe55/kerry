@@ -40,7 +40,7 @@ $flag=$_GET["flag"];
 
     <div class="text-center"><img src="img/discount1.jpg"></div>
     <div class='text-center  <?php if($flag=="1"){echo "show";}else{echo "hidden";}?>  '><img src="img/discount2.jpg"></div>
-    <div class='text-center <?php if($flag=="0"){echo "show";}else{echo "hidden";}?>'><a href="show.php"> <img src="img/discount3.jpg"></a></div>
+    <div class='text-center <?php if($flag=="0"){echo "show";}else{echo "hidden";}?>'><a href="show.php?#a<?php echo rand(1,6)?>"> <img src="img/discount3.jpg"></a></div>
 
     <footer class="text-center"><img src="img/footer.jpg"></footer>
 </div>

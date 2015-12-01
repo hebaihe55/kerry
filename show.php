@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zh">
 <head>
@@ -16,35 +15,8 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <link href="css/swiper.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
-<style>
-    .swiper-container {
-        width: 750px;
-        height: 1047px;
-        margin: 0px auto;
-    }
-
-    .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #fff;
-
-        /* Center slide text vertically */
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        -webkit-justify-content: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center;
-    }
-
-</style>
 
 </head>
 <body>
@@ -54,40 +26,15 @@
             href="javascript:history.go(-1);"><img src="img/headright.jpg"></a>
     </header>
 
-
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><a href="map.php"><img src="img/show1.jpg" class="img-responsive"></a></div>
-            <div class="swiper-slide"><a href="coffee.html"><img src="img/show2.jpg" class="img-responsive"></a></div>
-            <div class="swiper-slide"><a href="cake.html"><img src="img/show3.jpg" class="img-responsive"></a></div>
-            <div class="swiper-slide"><a href="sewing.html"><img src="img/show4.jpg" class="img-responsive"></a></div>
-
-        </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
-    </div>
-
-    <!-- Swiper JS -->
+    <div id="a1" class="text-center"><img src="img/ashow1.jpg" class="img-responsive"></div>
+    <div  id="a2" class="text-center"><img src="img/ashow2.jpg" class="img-responsive"></div>
+    <div  id="a3" class="text-center"><img src="img/ashow3.jpg" class="img-responsive"></div>
+    <div  id="a4" class="text-center"><img src="img/ashow4.jpg" class="img-responsive"></div>
+    <div  id="a5" class="text-center"><img src="img/ashow5.jpg" class="img-responsive"></div>
+    <div  id="a6" class="text-center"><img src="img/ashow6.jpg" class="img-responsive"></div>
 
 
-
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            pagination: '.swiper-pagination',
-            paginationClickable: true,
-            spaceBetween: 30,
-            autoplay: 3000
-        });
-    </script>
-
-
-
-
-
-    <footer><img src="img/footer.jpg"></footer>
-
-
+    <footer class="text-center"><img src="img/footer.jpg"></footer>
 </div>
 </body>
 </html>
