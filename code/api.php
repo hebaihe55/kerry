@@ -59,9 +59,8 @@ function UserEdit()
 
     if (count($ticket) > 0){
 
-echo date("y-M-d M:h:s");
 
-        if ($ticket["begintime"] < date("y-M-d M:h:s") && $ticket["endtime"] > date("y-M-d M:h:s")) {
+        if ($ticket["begintime"] < date("Y-m-d H:m:s") && $ticket["endtime"] > date("Y-m-d H:m:s")) {
             $ext1 = $ticket['brand'];
             $ext2 = $ticket["mid"];
             $flag=1;
@@ -76,8 +75,8 @@ kerry::UserEdit($openid, $username, $mobile,$ext1,$ext2);
 
 
 
-//header("Location:../discount.php?flag=" .$flag);
-//exit();
+header("Location:../discount.php?flag=" .$flag);
+exit();
 }
 
 ?>
