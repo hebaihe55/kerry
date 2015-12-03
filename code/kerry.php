@@ -45,7 +45,7 @@ class kerry
         if (!$conn) {
             die("Connection failed: " . mysql_connect_error());
         }
-        $sql = "select * from ticket where flag1=0 order by mid limit 0,1";
+        $sql = "select * from ticket where flag1=0 order by begintime  limit 0,1";
 
         $result = $conn->query($sql);
 

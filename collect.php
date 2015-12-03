@@ -1,20 +1,11 @@
 <?php
 require("code/kerry.php");
+$openid = $_COOKIE["user1"];
+$aa=array();
 
-$openid = $_COOKIE["user"];
+$aa=kerry::ActiveGroup($openid);
 
-$rs = array();
-
-$rs = kerry::ActiveGroup($openid);
-
-if(count($rs)==3)
-{
-
-    header("Location:lottery.php");
-    exit();
-}
-
-
+$i=count($aa);
 
 ?>
 <!DOCTYPE html>
@@ -46,21 +37,12 @@ if(count($rs)==3)
                 src="img/headright.jpg"></a>
     </header>
 
-    <div class="text-center">
-        <img src='<?php if ($rs["咖啡杯"] < 1) {
-            echo "img/errcoffee.jpg";
-        } else {
-            echo "img/findcoffee.jpg";
-        } ?>'><img src='<?php if ($rs["剪刀"] < 1) {
-            echo "img/errshear.jpg";
-        } else {
-            echo "img/findshear.jpg";
-        } ?>'><img src='<?php if ($rs["厨师帽"] < 1) {
-            echo "img/errhat.jpg";
-        } else {
-            echo "img/findhat.jpg";
-        } ?>'></div>
-
+    <div class='text-center <?php if($i!=0){echo "show";}else{ echo "hidden";} ?>'>
+    <a href="lottery.php"> <img src="img/cc1.jpg" />    </a>
+    </div>
+    <div class='text-center <?php if($i==0){echo "show";}else{ echo "hidden";} ?>'>
+       <img src="img/errcoffee.jpg" /><img src="img/errshear.jpg" /><img src="img/errhat.jpg" />
+    </div>
 
     <footer class="text-center"><img src="img/footer.jpg"></footer>
 </div>

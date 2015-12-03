@@ -1,25 +1,10 @@
 <?php
-
-
-
-require("code/kerry.php");
-header("Content-type: text/html;charset=utf-8");
-
-
-if (!isset($_COOKIE["user1"])) {
-
-    setcookie(user1, time() + mt_rand(), time() + 24*60*60- date('H')*60*60+date('m')*60 );
-}
-
-
-$openid = $_COOKIE["user1"];
-
-
-if (kerry::UserCheck($openid) == 0) {
-
-    kerry::UserAdd($openid);
-}
-kerry::ActiveAdd($openid, "剪刀");
+/**
+ * Created by PhpStorm.
+ * User: hejiyuan
+ * Date: 2015/12/2
+ * Time: 2:16
+ */
 ?>
 <!DOCTYPE html>
 <html lang="zh">
@@ -43,38 +28,15 @@ kerry::ActiveAdd($openid, "剪刀");
 
 </head>
 <body>
-<script type="text/javascript"
-        src="http://zb.weixin.qq.com/nearbycgi/addcontact/BeaconAddContactJsBridge.js">
-</script>
-<script type="text/javascript">
-    BeaconAddContactJsBridge.ready(function(){
-        //判断是否关注
-        BeaconAddContactJsBridge.invoke('checkAddContactStatus',{} ,function(apiResult){
-            if(apiResult.err_code == 0){
-                var status = apiResult.data;
-                if(status == 1){
-
-                }else{
-
-                    //跳转到关注页
-                    BeaconAddContactJsBridge.invoke('jumpAddContact');
-                }
-            }else{
-                alert(apiResult.err_msg)
-            }
-        });
-    });
-</script>
 <div class="container-fluid">
 
     <header class="text-center"><a href="menu.html"><img src="img/headleft.jpg"></a><img src="img/headcenter.jpg"><a
             href="javascript:history.go(-1);"><img src="img/headright.jpg"></a>
     </header>
 
-    <div class="text-center">
-    <a href="collect.php">    <img src="img/okshear.jpg" class="img-responsive"></a>
-
-    </div>
+    <div class="text-center"><img src="img/dream1.jpg" class="img-responsive"></div>
+    <div class="text-center"><img src="img/dream2.jpg" class="img-responsive"></div>
+    <div class="text-center"><a href="sos.html"> <img src="img/begin2.jpg" class="img-responsive"></a></div>
 
 
     <footer class="text-center"><img src="img/footer.jpg"></footer>

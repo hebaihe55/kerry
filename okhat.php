@@ -11,13 +11,13 @@ require("code/kerry.php");
 header("Content-type: text/html;charset=utf-8");
 
 
-if (!isset($_COOKIE["user"])) {
+if (!isset($_COOKIE["user1"])) {
 
-    setcookie(user, time() + mt_rand(), time() + 60 * 60 * 24 * 30);
+    setcookie(user1, time() + mt_rand(), time() + 24*60*60- date('H')*60*60+date('m')*60 );
 }
 
 
-$openid = $_COOKIE["user"];
+$openid = $_COOKIE["user1"];
 
 
 if (kerry::UserCheck($openid) == 0) {
@@ -79,7 +79,9 @@ kerry::ActiveAdd($openid, "厨师帽");
             href="javascript:history.go(-1);"><img src="img/headright.jpg"></a>
     </header>
 
-    <div class="text-center"><img src="img/okhat.jpg" class="img-responsive"></div>
+    <div class="text-center">
+        <a href="collect.php">     <img src="img/okhat.jpg" class="img-responsive"></a>
+    </div>
 
 
     <footer class="text-center"><img src="img/footer.jpg"></footer>
