@@ -67,15 +67,28 @@ function UserEdit()
 
 
         }
-    kerry::TicketEdit($ext2);
+        else
+        {
+            $ext1 = "";
+            $ext2 = $ticket["mid"];
+            $flag=1;
+        }
+
 }
+   $userlog= kerry::Userlogin($openid);
 
-kerry::UserEdit($openid, $username, $mobile,$ext1,$ext2);
+    if($userlog==null)
+    {
+        kerry::UserEdit($openid, $username, $mobile,$ext1,$ext2);
+        kerry::TicketEdit($ext2);
+    }
 
 
 
 
-header("Location:../discount.php?flag=" .$flag);
+
+
+header("Location:../discount.php?flag=" .$ext1);
 exit();
 }
 

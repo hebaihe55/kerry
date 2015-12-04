@@ -36,6 +36,26 @@ class kerry
     }
 
 
+    //判断用户是否存在
+    public static function Userlogin($openid)
+    {
+        $conn = mysqli_connect("localhost", "hejiyuan1", "HJYhjy@123321", "WECHAT1");
+        $conn->query("set names utf8");
+// 检测连接
+        if (!$conn) {
+            die("Connection failed: " . mysql_connect_error());
+        }
+        $sql = " select ext1 from users where openid='" . $openid . "'";
+
+        $result = $conn->query($sql);
+
+        $rows = $result->fetch_row();
+
+        return $rows[0];
+    }
+
+
+
     //查找未使用的折扣券
     public static function TicketUnused()
     {

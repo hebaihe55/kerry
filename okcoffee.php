@@ -5,10 +5,9 @@
 require("code/kerry.php");
 header("Content-type: text/html;charset=utf-8");
 
-
 if (!isset($_COOKIE["user1"])) {
 
-    setcookie(user1, time() + mt_rand(), time() + 24*60*60- date('H')*60*60+date('m')*60 );
+    setcookie(user1, time() + mt_rand(), time() + 24*60*60- (date('H')*60*60+date('m')*60) );
 }
 
 
@@ -20,8 +19,18 @@ if (kerry::UserCheck($openid) == 0) {
     kerry::UserAdd($openid);
 }
 
-kerry::ActiveAdd($openid, "咖啡杯");
+$aa=array();
 
+$aa=kerry::ActiveGroup($openid);
+
+$i=count($aa);
+
+if($i==0) {
+    kerry::ActiveAdd($openid, "咖啡杯");
+
+    header("Location: index.html");
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="zh">

@@ -39,9 +39,20 @@ $flag=$_GET["flag"];
     </header>
 
     <div class="text-center"><img src="img/discount1.jpg"></div>
-    <div class='text-center  <?php if($flag=="1"){echo "show";}else{echo "hidden";}?>  '><img src="img/discount2.jpg"></div>
-    <div class='text-center <?php if($flag=="0"){echo "show";}else{echo "hidden";}?>'><a href="show.php?#a<?php echo rand(1,6)?>"> <img src="img/discount3.jpg"></a></div>
+    <div class='text-center  <?php if($flag!=""){echo "show";}else{echo "hidden";}?>  '>
+        <img src="img/discount2_01.jpg">
+        <?php if($flag=="ESSIE NAILS"){?>
+        <h2 style="height:48px; line-height: 34px; font-size: 3em "><?php echo $flag?></h2>
+        <h3>凭此电子券至店铺消费即享5折优惠</h3>
+        <?php } else { ?>
+            <h2 style="height:48px; line-height: 4px; font-size: 3em "><?php echo $flag?></h2>
+            <h3>凭此电子折扣券可至北区1F客服台兑换实体优惠券</h3>
+            <h3>（仅限当天优惠使用）</h3>
+        <?php }  ?>
 
+    </div>
+    <div class='text-center <?php if($flag==""){echo "show";}else{echo "hidden";}?>'><a href="show.php?#a<?php echo rand(1,6)?>"> <img src="img/discount3.jpg"></a></div>
+<div style="visibility: hidden" ><img src="img/discount2_03.jpg" /> </div>
     <footer class="text-center"><img src="img/footer.jpg"></footer>
 </div>
 </body>

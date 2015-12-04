@@ -1,6 +1,29 @@
 <?php
 require("code/kerry.php");
+
+if (!isset($_COOKIE["user1"])) {
+
+    setcookie(user1, time() + mt_rand(), time() + 24*60*60- (date('H')*60*60+date('m')*60) );
+}
+
+
+
+
+
 $openid = $_COOKIE["user1"];
+
+$userlog= kerry::Userlogin($openid);
+
+
+
+if( !is_null( $userlog) )
+{
+    header("Location:../discount.php?flag=" .$userlog);
+    exit();
+}
+
+
+
 $aa=array();
 
 $aa=kerry::ActiveGroup($openid);
@@ -37,11 +60,11 @@ $i=count($aa);
                 src="img/headright.jpg"></a>
     </header>
 
-    <div class='text-center <?php if($i!=0){echo "show";}else{ echo "hidden";} ?>'>
+    <div class='text-center <?php if($i>=2){echo "show";}else{ echo "hidden";} ?>'>
     <a href="lottery.php"> <img src="img/cc1.jpg" />    </a>
     </div>
-    <div class='text-center <?php if($i==0){echo "show";}else{ echo "hidden";} ?>'>
-       <img src="img/errcoffee.jpg" /><img src="img/errshear.jpg" /><img src="img/errhat.jpg" />
+    <div class='text-center <?php if($i<2){echo "show";}else{ echo "hidden";} ?>'>
+       <img src="img/collect1.jpg" />
     </div>
 
     <footer class="text-center"><img src="img/footer.jpg"></footer>

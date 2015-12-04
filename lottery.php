@@ -5,6 +5,11 @@
  * Date: 2015/11/26
  * Time: 11:09
  */
+
+if (!isset($_COOKIE["user1"])) {
+
+    setcookie(user1, time() + mt_rand(), time() + 24*60*60- (date('H')*60*60+date('m')*60) );
+}
 ?>
 
 
@@ -64,7 +69,7 @@
         <form action="code/api.php" method="post" name="form1" id="form1">
             <input type="text" class="txt " placeholder="请输入姓名" id="username" name="username">
             <input type="text" class="txt " placeholder="请输入手机号" id="mobile" name="mobile">
-            <input type="hidden" value='<?php echo $_COOKIE["user"] ?>' id="openid" name="openid">
+            <input type="hidden" value='<?php echo $_COOKIE["user1"] ?>' id="openid" name="openid">
 
 
             <img src="img/submit.png" onclick="return check()">
